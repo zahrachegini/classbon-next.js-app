@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
+import { Header } from "./_components/header";
+import { Footer } from "./_components/footer";
 
 const figtree = Figtree({
   display: "swap",
@@ -54,18 +56,14 @@ export default function RootLayout({
     <html
       lang="en"
       dir="rtl"
-      className={`${figtree.variable} ${iranyekan.variable}`}
+      className={`dark ${figtree.variable} ${iranyekan.variable}`}
     >
-      <body className="flex flex-col min-h-screen font-bold uppercase">
-        <header className="bg-gray-200 flex items-center justify-center text-3xl h-20">
-          هدر
-        </header>
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+        <Header />
         <div className="flex-1 flex justify-center items-center">
           {children}
         </div>
-        <footer className="bg-gray-200 flex items-center justify-center text-3xl h-20">
-          footer
-        </footer>
+        <Footer />
       </body>
     </html>
   );

@@ -52,10 +52,11 @@ const config: Config = {
   content: ["./src/app/**/*.{tsx, jsx}"],
   theme: {
     colors: tailwindColors,
-    extend: {
-      backgroundImage: {},
-    },
+    container: {
+      center: true
+  }
   },
+  darkMode: "class",
   plugins: [],
 };
 export default config;
